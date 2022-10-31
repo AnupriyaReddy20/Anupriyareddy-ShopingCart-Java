@@ -1,0 +1,726 @@
+package pack01;
+
+import java.util.Scanner;
+
+public class ClassBB
+{
+	static Scanner sc=new Scanner(System.in);
+	/*--------------------------------------------------------------;
+	selection for option men or women----------*/
+	static int m_or_w;
+	//product code selection for women------------
+	static int Wcode;
+	//codes entered for Women are 
+	static int beautyCode;
+	static int watchCode;
+	static int bCode;
+	static int ApplianceCode; 
+	//all quanties for womencode
+	static int facewashQ;
+	static int BB_CCQ;
+	static int SunscreenQ;
+	static int MoisturizerQ;
+	//all the total cost of women(beautycode)
+	static int facewashT;
+	static int BB_CCT;
+	static int SunscreenT;
+	static int MoisturizerT;
+	//separate cost in beautycode
+	static int facewashcost=150;
+	static int BB_CCcost=250;
+	static int Sunscreencost=300;
+	static int Moisturizercost=200;
+	//all quanties in watchcode(women)
+	static int titanQ;
+	static int fossilQ;
+	static int fastrackQ;
+	//separate cost in watchcode
+	static int titancost=3000;
+	static int fossilcost=5000;
+	static int fastrackcost=1000;
+	//separate totalcost in watchcode
+	static int titanT;
+	static int fossilT;
+	static int fastrackT;
+	//all quanties in bCode(women)
+	static int handbagQ;
+	static int walletQ;
+	static int clutchesQ;
+	//separate cost in bCode(WOMEN)
+	static int handbagcost=1500;
+	static int walletcost=1000;
+	static int clutchescost=500;
+	//separate totalcost in bCode(WOMEN)
+	static int handbagT;
+	static int walletT;
+	static int clutchesT;
+	//all quanties in ApplianceCode(women)
+	static int straightnerQ;
+	static int dryerQ;
+	static int curlerQ;
+	//separate cost in ApplianceCode(women)
+	static int straightnercost;
+	static int dryercost;
+	static int curlercost;
+	//separate totalcost in ApplianceCode(women)
+	static int straightnerT;
+	static int dryerT;
+	static int curlerT;
+	//product code selection for men------------
+	static int Mcode;
+	//codes entered for MEN are-------------- 
+	static int Mwcode;
+	//all quanties in Mwcode(men)
+	static int mtimexQ;
+	static int mfossilQ;
+	static int mfastrackQ;
+	static int mcasioQ;
+	//separate cost in Mwcode(men)
+	static int mtimexcost=2600;
+	static int mfossilcost=5000;
+	static int mfastrackcost=1000;
+	static int mcasiocost=8000;
+	//separate totalcost in Mwcode(men)
+	static int mtimexT;
+	static int mfossilT;
+	static int mfastrackT;
+	static int mcasioT;
+	//codes entered for MEN are-------------- 
+	static int Fitcode;
+	//all quanties in Fitcode(men)
+	static int dumbbellQ;
+	static int gripperQ;
+	static int pullupbarQ;
+	static int duffelbagQ;
+	//separate cost in Fitcode(men)
+	static int dumbbellcost=849;
+	static int grippercost=390;
+	static int pullupbarcost=549;
+	static int duffelbagcost=1000;
+	//separate totalcost in Fitcode(men)
+	static int dumbbellT;
+	static int gripperT;
+	static int pullupbarT;
+	static int duffelbagT;
+	//codes entered for MEN are-------------- 
+	static int accesoriesCode;
+	//all quanties in accesoriesCode(men)
+	static int sunglassQ;
+	static int beltsQ;
+	static int capsQ;
+	static int tiesQ;
+	//all cost in accesoriesCode(men)
+	static int sunglasscost=500;
+	static int beltscost=450;
+	static int capscost=680;
+	static int tiescost=249;
+	//all cost in accesoriesCode(men)
+	static int sunglassT;
+	static int beltsT;
+	static int capsT;
+	static int tiesT;
+	//codes entered for MEN are-------------- 
+	static int PersonalCode;
+	//all quanties in PersonalCode(men)
+	static int mfacewashQ;
+	static int detankitQ;
+	static int sprayQ;
+	static int MmoisturizerQ;
+	//all cost in PersonalCode(men)
+	static int mfacewashcost=750;
+	static int detankitcost=1850;
+	static int spraycost=580;
+	static int Mmoisturizercost=690;	
+	//all quanties in PersonalCode(men)
+	static int mfacewashT;
+	static int detankitT;
+	static int sprayT;
+	static int MmoisturizerT;	
+	//details
+	static String Name;
+	static String Address;
+	static long Contactno;
+	public void meth1() 
+	{
+		System.out.println("--------------------------------------------");
+		System.out.println("---------WELCOME TO ANU'S COLLECTION--------");
+		System.out.println("--------------------------------------------");
+		System.out.println("|     1) WOMEN👩     |");
+		System.out.println("|     2) MEN🧑       |");
+		System.out.println("enter your option:");
+		int m_or_w=sc.nextInt();
+		if(m_or_w==1)
+		{
+			System.out.println("----------------------------------------");
+			System.out.println("|      1001)Beauty & Personal Care     |");
+			System.out.println("|      1002)Watches                    |");
+			System.out.println("|      1003)Bags,Wallets & Cluctches   |");
+			System.out.println("|      1004)Personal Care Appliance    |");
+			System.out.println("----------------------------------------");
+			System.out.println("enter your option:");
+			Wcode=sc.nextInt();
+			while(Wcode==1001)
+			{
+				this.womencode1001();
+				break;
+			}
+			while(Wcode==1002)
+			{
+				this.womencode1002();
+				break;
+			}
+			while(Wcode==1003)
+			{
+				this.womencode1003();
+				break;
+			}
+			while(Wcode==1004)
+			{
+				this.womencode1004();
+				break;
+			}
+		}
+		if(m_or_w==2)
+		{
+			System.out.println("----------------------------------------");
+			System.out.println("|      2001)Watches                    |");
+			System.out.println("|      2002)Fitness Gadgets            |");
+			System.out.println("|      2003)Men Accessories            |");
+			System.out.println("|      2004)Personal Care&Beauty       |");
+			System.out.println("----------------------------------------");
+			System.out.println("enter your option:");
+			Mcode=sc.nextInt();
+			while(Mcode==2001)
+			{
+				this.mencode2001();
+				break;
+			}
+			while(Mcode==2002)
+			{
+				this.mencode2002();
+				break;
+			}
+			while(Mcode==2003)
+			{
+				this.mencode2003();	
+				break;
+			}
+			while(Mcode==2004)
+			{
+				this.mencode2004();
+				break;
+			}
+		}
+		this.details();
+	}
+	public void womencode1001()
+	{
+		System.out.println("'💕BEAUTIFUL GLOWING SKIN IS THE BASIS OF ANY LOOK💕'");
+		System.out.println("|----------------------------------------------------------------|");
+		System.out.println("|   |Codeno|     |Products|           |Qty|          |Price|     |");
+		System.out.println("|----------------------------------------------------------------|");
+		System.out.println("|   1201)        Natural face wash----- (1)-----------150Rs------|");
+		System.out.println("|   1202)        BB & CC Cream -------  (1)-----------250Rs------|");
+		System.out.println("|   1203)        Sunscreen  ----------  (1)-----------300Rs------|");
+		System.out.println("|   1204)        Moisturizer-------     -(1)-----------200Rs-----|");
+		System.out.println("|   1205)        EXIT -------------------------------------------|");
+		System.out.println("|----------------------------------------------------------------|");
+		System.out.println("Please choose your product :");
+		beautyCode=sc.nextInt();
+		switch(beautyCode)
+		{
+		case 1201:
+			System.out.println("Nice Choice buddy 👌");
+			System.out.println("Please enter the required quantity :");
+			facewashQ=sc.nextInt();
+			facewashT=facewashQ*facewashcost;
+			System.out.println("Total Face Wash cost:"+facewashQ*facewashcost+"Rs");
+			break;
+		case 1202:
+			System.out.println("Nice Choice buddy 👌");
+			System.out.println("Please enter the required quantity :");
+			BB_CCQ=sc.nextInt();
+			BB_CCT=BB_CCQ*BB_CCcost;
+			System.out.println("Total BB&CC Cream cost:"+BB_CCQ*BB_CCcost+"Rs");
+			break;
+		case 1203:
+			System.out.println("Nice Choice buddy 👌");
+			System.out.println("Please enter the required quantity :");
+			SunscreenQ=sc.nextInt();
+			SunscreenT=SunscreenQ*Sunscreencost;
+			System.out.println("Total Sunscreen cost:"+SunscreenQ*Sunscreencost+"Rs");
+			break;
+		case 1204:
+			System.out.println("Nice Choice buddy 👌");
+			System.out.println("Please enter the required quantity :");
+			MoisturizerQ=sc.nextInt();
+			MoisturizerT=MoisturizerQ*Moisturizercost;
+			System.out.println("Total moisturizer cost:"+MoisturizerQ*Moisturizercost+"Rs");
+			break;
+		case 1205:
+			this.details();
+		default:
+			System.out.println("please enter the correct code");
+			this.womencode1001();				
+		}
+	}	
+	public void womencode1002()
+	{
+		System.out.println("'WATCHES ARE TO HELP YOU TO APPRECIATE THE TRUE VALUE OF A TIMEPIECE⌚'");
+		System.out.println("|----------------------------------------------------------------|");
+		System.out.println("|   |Codeno|      |Products|           |Qty|         |Price|     |");
+		System.out.println("|----------------------------------------------------------------|");
+		System.out.println("|    1206)        TITAN Watch---------- (1)-----------3000Rs-----|");
+		System.out.println("|    1207)        FOSSIL Watch----------(1)-----------5000Rs-----|");
+		System.out.println("|    1208)        FASTRACK Watch--------(1)-----------1000Rs-----|");
+		System.out.println("|    1209)        EXIT ------------------------------------------|");
+		System.out.println("|----------------------------------------------------------------|");
+		System.out.println("Please choose your product :");
+		watchCode=sc.nextInt();
+		switch(watchCode)
+		{
+		case 1206:
+			System.out.println("Nice Choice Buddy👌👌");
+			System.out.println("Please enter the required quantity :");
+			titanQ=sc.nextInt();
+			titanT=titanQ*titancost;
+			System.out.println("Total TITAN Watch Cost ="+titanQ*titancost+"Rs");
+			break;
+		case 1207:
+			System.out.println("Nice Choice Buddy👌👌");
+			System.out.println("Please enter the required quantity :");
+			fossilQ=sc.nextInt();
+			fossilT=fossilQ*fossilcost;
+			System.out.println("Total FOSSIL Watch Cost ="+fossilQ*fossilcost+"Rs");
+			break;
+		case 1208:
+			System.out.println("Nice Choice Buddy👌👌");
+			System.out.println("Please enter the required quantity :");
+			fastrackQ=sc.nextInt();
+			fastrackT=fastrackQ*fastrackcost;
+			System.out.println("Total FASTRACK Watch Cost ="+fastrackQ*fastrackcost+"Rs");
+			break;
+		case 1209:
+			this.details();
+		default:
+			System.out.println("Please Enter The Correct Code");
+			womencode1002();
+		}
+	}
+	public void womencode1003()
+	{
+		System.out.println("|----------------------------------------------------------------|");
+		System.out.println("|   |Codeno|       |Products|          |Qty|         |Price|     |"); 
+		System.out.println("|----------------------------------------------------------------|");
+		System.out.println("|    1301)          Handbags----------- (1)-----------1500Rs-----|");
+		System.out.println("|    1302)          Wallet--------------(1)-----------1000Rs-----|");
+		System.out.println("|    1303)          Clutches----------- (1)----------- 500Rs-----|");
+		System.out.println("|    1304)          EXIT ----------------------------------------|");
+		System.out.println("|----------------------------------------------------------------|");
+		System.out.println("Please choose your product :");
+		bCode=sc.nextInt();
+		switch(bCode)
+		{
+		case 1301:
+			System.out.println("Its a beautiful one...Nice choice...");
+			System.out.println("Please enter the required quantity :");
+			handbagQ=sc.nextInt();
+			handbagT=handbagQ*handbagcost;
+			System.out.println("total Handbags Cost="+handbagQ*handbagcost+"Rs");
+			break;
+		case 1302:
+			System.out.println("Its a beautiful one...Nice choice...");
+			System.out.println("Please enter the required quantity :");
+			walletQ=sc.nextInt();
+			walletT=walletQ*walletcost;
+			System.out.println("total Wallet Cost="+walletQ*walletcost+"Rs");
+			break;
+		case 1303:
+			System.out.println("Its a beautiful one...Nice choice...");
+			System.out.println("Please enter the required quantity :");
+			clutchesQ=sc.nextInt();
+			clutchesT=clutchesQ*clutchescost;
+			System.out.println("total Clutches Cost="+clutchesQ*clutchescost+"Rs");
+			break;
+		case 1304:
+		    this.details();
+		default:
+			System.out.println("Please Enter The Correct Code"); 
+			this.womencode1003();
+		}
+		
+	}
+	public void womencode1004()
+	{
+		System.out.println("'Fashion Is The Armor To Survive The Reality Of Everyday Life' LETS START FASHIONING YOURSELF BUDDY");
+		System.out.println("|--------------------------------------------------------------------------|");
+		System.out.println("|   |Codeno|          |Products|                  |Qty|          |Price|   |");
+		System.out.println("|------------------------------------------------------------------------- |");
+		System.out.println("|    1401)        ANU'S Hair Straightener-----------(1)-----------2500Rs---|");
+		System.out.println("|    1402)        ANU'S Hair Dryer   -------------- (1)-----------1000Rs---|");
+		System.out.println("|    1403)        ANU'S Hair Curler&Straightener----(1)-----------3500Rs---|");
+		System.out.println("|    1404)        EXIT ----------------------------------------------------|");
+		System.out.println("|--------------------------------------------------------------------------|");
+		System.out.println("Please choose your product :");
+		ApplianceCode=sc.nextInt();
+		switch(ApplianceCode)
+		{
+		case 1401:
+			System.out.println("Good Choice Buddy");
+			System.out.println("Please enter the required quantity :");
+			straightnerQ=sc.nextInt();
+			straightnerT=straightnerQ*straightnercost;
+			System.out.println("total Hair Straightener Cost="+straightnerQ*straightnercost+"Rs");
+			break;
+		case 1402:
+			System.out.println("Good Choice Buddy");
+			System.out.println("Please enter the required quantity :");
+			dryerQ=sc.nextInt();
+			dryerT=dryerQ*dryercost;
+			System.out.println("total Hair Dryer Cost="+dryerQ*dryercost+"Rs");
+			break;
+		case 1403:
+			System.out.println("Good Choice Buddy");
+			System.out.println("Please enter the required quantity :");
+			curlerQ=sc.nextInt();
+			curlerT=curlerQ*curlercost;
+			System.out.println("total Hair Curler&Straightener Cost="+curlerQ*curlercost+"Rs");
+			break;
+		case 1404:
+			this.details();
+		default:
+			System.out.println("Please Enter The Correct Code"); 
+			this.womencode1004();
+		}
+	}
+	public void mencode2001()
+	{
+		System.out.println("WE VALUE YOUR TIME GET READY TO LOOK ELEGANT");
+		System.out.println("|----------------------------------------------------------------|");
+		System.out.println("|   |Codeno|      |Products|           |Qty|         |Price|     |");
+		System.out.println("|----------------------------------------------------------------|");
+		System.out.println("|    2101)        TIMEX Watch---------- (1)-----------2600Rs-----|");
+		System.out.println("|    2102)        FOSSIL Watch----------(1)-----------5000Rs-----|");
+		System.out.println("|    2103)        FASTRACK Watch--------(1)-----------1000Rs-----|");
+		System.out.println("|    2104)        CASIO Watch ----------(1)-----------8000Rs-----|");
+		System.out.println("|    2105)        EXIT ------------------------------------------|");
+		System.out.println("|----------------------------------------------------------------|");
+		System.out.println("Please choose your product :");
+		Mwcode=sc.nextInt();
+		switch(Mwcode)
+		{
+		case 2101:
+			System.out.println("Nice Choice Buddy👌👌👌");
+			System.out.println("Please enter the required quantity :");
+			mtimexQ=sc.nextInt();
+			mtimexT=mtimexQ*mtimexcost;
+			System.out.println("total Timex Watch Cost="+mtimexQ*mtimexcost+"Rs");
+			break;
+		case 2102:
+			System.out.println("Nice Choice Buddy👌👌👌");
+			System.out.println("Please enter the required quantity :");
+			mfossilQ=sc.nextInt();
+			mfossilT=mfossilQ*mfossilcost;
+			System.out.println("total Fossil Watch Cost="+mfossilQ*mfossilcost+"Rs");
+			break;
+		case 2103:
+			System.out.println("Nice Choice Buddy👌👌👌");
+			System.out.println("Please enter the required quantity :");
+			mfastrackQ=sc.nextInt();
+			mfastrackT=mfastrackQ*mfastrackcost;
+			System.out.println("total Fastrack Watch Cost="+mfastrackQ*mfastrackcost+"Rs");
+			break;
+		case 2104:
+			System.out.println("Nice Choice Buddy👌👌👌");
+			System.out.println("Please enter the required quantity :");
+			mcasioQ=sc.nextInt();
+			mcasioT=mcasioQ*mcasiocost;
+			System.out.println("total Casio Watch Cost="+mcasioQ*mcasiocost+"Rs");
+			break;
+		case 2105:
+			this.details();
+		default:
+			System.out.println("Please Enter The Correct Code");  
+			this.mencode2001();
+		}
+	}
+	public void mencode2002()
+	{
+		System.out.println("'GET FIT AND BE ACTIVE ");
+		System.out.println("|-----------------------------------------------------------------------------------------|");
+		System.out.println("|   |Codeno|       |Products|                                 |Qty|           |Price|     |");
+		System.out.println("|-----------------------------------------------------------------------------------------|");
+		System.out.println("|    2106)        BODYFIT gym combo Dumbbell Set----------------(1)------------849Rs------|");
+		System.out.println("|    2107)        Hand Strengthening Gripper------------------  (1)------------390Rs------|");
+		System.out.println("|    2108)        Heavy duty Pull Up Bar ---------------------- (1)------------549Rs------|");
+		System.out.println("|    2109)        Water Resistant Gym Duffel bag with gloves----(1)-----------1000Rs-----|");
+		System.out.println("|    2110)        EXIT -------------------------------------------------------------------|");
+		System.out.println("|-----------------------------------------------------------------------------------------|");
+		System.out.println("Please choose your product :");
+		Fitcode=sc.nextInt();
+		switch(Fitcode)
+		{
+		case 2106:
+			System.out.println("Please enter the required quantity :");
+			dumbbellQ=sc.nextInt();
+			dumbbellT=dumbbellQ*dumbbellcost;
+			System.out.println("total Dumbell Set Cost="+dumbbellQ*dumbbellcost+"Rs");
+			break;
+		case 2107:
+			System.out.println("Please enter the required quantity :");
+			gripperQ=sc.nextInt();
+			gripperT=gripperQ*grippercost;
+			System.out.println("total Gripper Cost="+gripperQ*grippercost+"Rs");
+			break;
+		case 2108:
+			System.out.println("Please enter the required quantity :");
+			pullupbarQ=sc.nextInt();
+			pullupbarT=pullupbarQ*pullupbarcost;
+			System.out.println("total Pull Up Bar Cost="+pullupbarQ*pullupbarcost+"Rs");
+			break;
+		case 2109:
+			System.out.println("Please enter the required quantity :");
+			duffelbagQ=sc.nextInt();
+			duffelbagT=duffelbagQ*duffelbagcost;
+			System.out.println("total duffel bag with gloves Cost="+duffelbagQ*duffelbagcost+"Rs");
+			break;
+		case 2110:
+			this.details();
+		default:
+			System.out.println("Please Enter The Correct Code"); 
+			this.mencode2002();
+		}
+	}
+	public void mencode2003()
+	{
+		System.out.println("|---------------------------------------------------------------|");
+		System.out.println("|   |Codeno|      |Products|           |Qty|        |Price|     |");
+		System.out.println("|---------------------------------------------------------------|");
+		System.out.println("|    2201)        Sunglasses&Frames---- (1)-----------500rs-----|");
+		System.out.println("|    2202)        Belts       ----------(1)-----------450rs-----|");
+		System.out.println("|    2203)        Caps&Hats     --------(1)-----------680rs-----|");
+		System.out.println("|    2204)        Ties&PocketSquares----(1)-----------249rs-----|");
+		System.out.println("|    2205)        EXIT -----------------------------------------|");
+		System.out.println("|---------------------------------------------------------------|");
+		System.out.println("Please choose your product :");
+		accesoriesCode=sc.nextInt();
+		switch(accesoriesCode)
+		{
+		case 2201:
+			System.out.println("It looks great buddy");
+			System.out.println("Please enter the required quantity :");
+			sunglassQ=sc.nextInt();
+			sunglassT=sunglassQ*sunglasscost;
+			System.out.println("total Sunglasses&Frames Cost="+sunglassQ*sunglasscost+"Rs");
+			break;
+		case 2202:
+			System.out.println("It looks great buddy");
+			System.out.println("Please enter the required quantity :");
+			beltsQ=sc.nextInt();
+			beltsT=beltsQ*beltscost;
+			System.out.println("total Belts Cost="+beltsQ*beltscost+"Rs");
+			break;
+		case 2203:
+			System.out.println("It looks great buddy");
+			System.out.println("Please enter the required quantity :");
+			capsQ=sc.nextInt();
+			capsT=capsQ*capscost;
+			System.out.println("total Caps&Hats Cost="+capsQ*capscost+"Rs");
+			break;
+		case 2204:
+			System.out.println("It looks great buddy");
+			System.out.println("Please enter the required quantity :");
+			tiesQ=sc.nextInt();
+			tiesT=tiesQ*249;
+			System.out.println("total Ties&PocketSquares Cost="+tiesQ*tiescost+"Rs");
+			break;
+		case 2205:
+			this.details();
+		default:
+			System.out.println("Please Enter The Correct Code"); 
+			this.mencode2003();
+		}
+	}
+	public void mencode2004()
+	{
+		System.out.println("CHANGING PRODUCTS FOR MEN'S BEAUTY");
+		System.out.println("|--------------------------------------------------------------------------|");
+		System.out.println("|   |Codeno|         |Products|                  |Qty|          |Price|    |");
+		System.out.println("|--------------------------------------------------------------------------|");
+		System.out.println("|   3201)       Anti acne face wash  -------------(1)------------750Rs-----|");
+		System.out.println("|   3202)       Ultimate Charcoal Detan kit ------(1)-----------1850Rs-----|");
+		System.out.println("|   3203)       Beardo Hair Spray  -------------  (1)------------580Rs-----|");
+		System.out.println("|   3204)       Moisturizer  ---------------------(1)------------690Rs-----|");
+		System.out.println("|   3205)       EXIT ------------------------------------------------------|");
+		System.out.println("|--------------------------------------------------------------------------|");
+		System.out.println("Please choose your product :");
+		PersonalCode=sc.nextInt();
+		switch(PersonalCode)
+		{
+		case 3201:
+			System.out.println("Nice Choice buddy 👌");
+			System.out.println("Please enter the required quantity :");
+			mfacewashQ=sc.nextInt();
+			mfacewashT=mfacewashQ*mfacewashcost;
+			System.out.println("total Face Wash Cost="+mfacewashQ*mfacewashcost+"Rs");
+			break;
+		case 3202:
+			System.out.println("Nice Choice buddy 👌");
+			System.out.println("Please enter the required quantity :");
+			detankitQ=sc.nextInt();
+			detankitT=detankitQ*detankitcost;
+			System.out.println("total Charcoal Detan Kit Cost="+detankitQ*detankitcost+"Rs");
+			break;
+		case 3203:
+			System.out.println("Nice Choice buddy 👌");
+			System.out.println("Please enter the required quantity :");
+			sprayQ=sc.nextInt();
+			sprayT=sprayQ*spraycost;
+			System.out.println("total Hair Spray Cost="+sprayQ*spraycost+"Rs");
+			break;
+		case 3204:
+			System.out.println("Nice Choice buddy 👌");
+			System.out.println("Please enter the required quantity :");
+			MmoisturizerQ=sc.nextInt();
+			MmoisturizerT=MmoisturizerQ*Mmoisturizercost;
+			System.out.println("total Moisturize Cost="+MmoisturizerQ*Mmoisturizercost+"Rs");
+			break;
+		case 3205:
+			this.details();
+		default:
+			System.out.println("Please Enter The Correct Code");
+			this.mencode2004();
+		}	
+		
+	}
+	public void details()
+	{
+		System.out.println("press 1 for continue");
+		System.out.println("press 2 for Billing ");
+        int cc=sc.nextInt();
+        switch(cc)
+        {
+            case 1:
+        	   this.meth1();
+        	   break;
+            case 2:
+            	this.CustomerDetails(); 
+            	this.Billing();
+            	break;
+            default:
+            	System.out.println("please enter the correct code");
+            	this.details();
+            	break;
+        }
+	}    
+	public void CustomerDetails()
+	{ 
+		System.out.println("--------------Details-----------");
+		System.out.println("Enter your good name:");
+		Name=sc.next();
+		System.out.println("Enter your Address:");
+		Address=sc.next();
+		System.out.println("Enter your Contactno:");
+		Contactno=sc.nextLong();
+	}
+	public void Billing()
+	{
+		System.out.println("-------------------------------------------------------------");
+		System.out.println("                WELCOME TO ANU'S COLLECTION                  ");
+		System.out.println("            (1-21/1,Near metro station,SRNAGAR)              ");
+		System.out.println("-------------------------------------------------------------");
+		System.out.println("customer details:"+Name+","+Address+","+Contactno);
+		System.out.println("-------------------------------------------------------------");
+		System.out.println("|Product Name|                |Qty|                |Cost|    ");
+		System.out.println("-------------------------------------------------------------");
+		if(facewashT>0)
+			System.out.println(  "FaceWash"+"                       " +facewashQ +"                " +facewashT+"Rs" );
+		if(BB_CCT>0)
+			System.out.println(  "BB&CC cream"+"                     "+BB_CCQ +"                "    +BB_CCT+"Rs" );
+		if(SunscreenT>0)
+			System.out.println(  "Sunscreen"+"                       "+SunscreenQ +"                "+SunscreenT+"Rs" );
+		if(MoisturizerT>0)
+			System.out.println(  "Moisturizer"+"                     "+MoisturizerQ +"               "+MoisturizerT+"Rs" );
+		if(titanT>0)
+			System.out.println(  "Titan Watch"+"                     "+titanQ +"                "     +titanT+"Rs" );
+		if(fossilT>0)
+			System.out.println(  "Fossil Watch"+"                    "+fossilQ +"                "    +fossilT+"Rs" );
+		if(fastrackT>0)
+			System.out.println(  "Fastrack Watch"+"                  "+fastrackQ +"                "  +fastrackT+"Rs" );
+		if(handbagT>0)
+			System.out.println(  "handbags"+"                        "+handbagQ +"                "   +handbagT+"Rs" );
+		if(walletT>0)
+			System.out.println(  "wallet"+"                          "+walletQ +"                "    +walletT+"Rs" );
+		if(clutchesT>0)
+			System.out.println(  "clutches"+"                        "+clutchesQ+"                "   +clutchesT+"Rs" );
+		if(straightnerT>0)
+			System.out.println(  "Hair straightner"+"                "+straightnerQ+"                "+straightnerT+"Rs" );
+		if(dryerT>0)
+			System.out.println(  "Hair dryer"+"                      "+dryerQ+"                "      +dryerT+"Rs" );
+		if(curlerT>0)
+			System.out.println(  "Hair curler&straightner"+"         "+curlerQ+"                "     +curlerT+"Rs" );
+		if(mtimexT>0)
+			System.out.println(  "Timex Watch"+"                     "+mtimexQ+"                "     +mtimexT+"Rs" );
+		if(mfossilT>0)
+			System.out.println(  "Fossil Watch"+"                    "+mfossilQ+"                "    +mfossilT+"Rs" );
+		if(mfastrackT>0)
+			System.out.println(  "Fastrack Watch"+"                  "+mfastrackQ+"                "  +mfastrackT+"Rs" );
+		if(mcasioT>0)
+			System.out.println(  "Casio Watch"+"                     "+mcasioQ+"                "     +mcasioT+"Rs" );
+		if(dumbbellT>0)
+			System.out.println(  "Dumbbell"+"                        "+dumbbellQ+"                "   +dumbbellT+"Rs" );
+		if(gripperT>0)
+			System.out.println(  "Gripper"+"                         "+gripperQ+"                "    +gripperT+"Rs" );
+		if(pullupbarT>0)
+			System.out.println(  "Pull Up bar"+"                     "+pullupbarQ+"                "  +pullupbarT+"Rs" );
+		if(duffelbagT>0)
+			System.out.println(  "Duffel bag with Gloves"+"          "+duffelbagQ+"                "  +duffelbagT+"Rs" );
+		if(sunglassT>0)
+			System.out.println(  "Sunglasses&frames"+"               "+sunglassQ+"                "   +sunglassT+"Rs" );
+		if(beltsT>0)
+			System.out.println(  "Belts"+"                           "+beltsQ+"                "      +beltsT+"Rs" );
+		if(capsT>0)
+			System.out.println(  "Caps&Hats"+"                       "+capsQ+"                "       +capsT+"Rs" );
+		if(tiesT>0)
+			System.out.println(  "Ties&Pocket Squares"+"             "+tiesQ+"                "       +tiesT+"Rs" );
+		if(mfacewashT>0)
+			System.out.println(  "Men Facewash"+"                    "+mfacewashQ+"                "  +mfacewashT+"Rs" );
+		if(detankitT>0)
+			System.out.println(  "Detan Kit"+"                       "+detankitQ+"                "   +detankitT+"Rs" );
+		if(sprayT>0)
+			System.out.println(  "Hair Spray"+"                      "+sprayQ+"                "      +sprayT+"Rs" );
+		if(MmoisturizerT>0)
+			System.out.println(  "Moisturizer"+"                     "+MmoisturizerQ+"                "+MmoisturizerT+"Rs" );
+		System.out.println("--------------------------------------------------------------");
+		int TotalAmount=facewashT+BB_CCT+SunscreenT+MoisturizerT+titanT+fossilT+fastrackT+handbagT+walletT+clutchesT+straightnerT+dryerT+curlerT
+		                +mtimexT+mfossilT+mfastrackT+mcasioT+dumbbellT+gripperT+pullupbarT+duffelbagT+sunglassT+beltsT;
+		System.out.println("Total Bill Purchased Products  : "+TotalAmount+"Rs");
+		if(TotalAmount>=5000)
+		{
+			int discount=TotalAmount*10/100;
+			int TotalBill=TotalAmount-discount;
+			System.out.println("You Have Received a Discount of 10% :"+discount+"Rs");
+			System.out.println("FinalBill :"+TotalBill+"Rs");
+			this.Thanks();
+		}
+		else
+		{
+			System.out.println("FinalBill :"+TotalAmount+"Rs");
+			this.Thanks();
+		}
+	}		
+	public void Thanks()
+	{
+		System.out.println("---------------------------------------------------");
+		System.out.println("---------THANKS FOR VISITING ANU'S COLLECTION------");
+		System.out.println("---------------------------------------------------");
+
+	}
+	public static void main(String[] args) 
+	{
+		ClassBB aobj=new ClassBB();
+		aobj.meth1();	
+	}
+
+}
+
